@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to my website">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
   </head>
   <body>
     <header>
@@ -14,16 +13,16 @@
     </header>
     
     <nav>
-      <a href="home.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://example.com">External Link</a>
+      <a href="home.html" aria-label="Go to homepage">Home</a>
+      <a href="about.html" aria-label="Learn about us">About</a>
+      <a href="contact.html" aria-label="Contact us">Contact</a>
+      <a href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Visit external link">External Link</a>
     </nav>
 
     <section>
       <h2>About Us</h2>
       <p>Learn more about our mission and values.</p>
-      <img src="images/team.jpg">
+      <img src="images/team.jpg" alt="Our team photo">
     </section>
 
     <article>
@@ -36,19 +35,23 @@
       <p>&copy; 2024 My Website</p>
     </footer>
     
-    <form>
+    <form action="submit_form.php" method="post">
       <label for="name">Name</label>
-      <input type="text" id="name" name="name">
+      <input type="text" id="name" name="name" required>
       <label for="email">Email</label>
-      <input type="email" id="email" name="email">
+      <input type="email" id="email" name="email" required>
       <input type="submit" value="Submit">
     </form>
     
     <div>
       <h3>Comments</h3>
       <p>Leave your comment below:</p>
-      <textarea name="comment" placeholder="Type your comment"></textarea>
+      <label for="comment">Comment</label>
+      <textarea id="comment" name="comment" placeholder="Type your comment" required></textarea>
       <button>Submit</button>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
+
